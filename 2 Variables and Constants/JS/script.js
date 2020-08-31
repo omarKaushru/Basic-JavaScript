@@ -1,6 +1,17 @@
-document.write("JS file is connectd");
-var fullName; //variable decleration
-//prompt takes input from the user. one can also sgow a message during input session by
-// just using cotation inside prompt.
-fullName = prompt("Enter your full name"); 
-document.write(fullName);
+// Variables declaration 
+// Variables can decleared by usein "var" or "let"
+// for example var  firstName or let firstName
+// declare some variables and initialize them
+var a = 5;
+let b = 'Md Omar';
+//keyword 'const', 'var'
+const c = true;
+
+// assign new values
+a = 6;
+b = b + 'Kaushru';
+// c = false; // TypeError: Assignment to constant variable
+// console.log(a);
+// console.log(b);
+document.writeln(a + " "+ b);
+document.write(c);
