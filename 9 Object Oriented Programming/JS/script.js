@@ -31,32 +31,56 @@
 // console.log(person3.calculateAge());
 
                             //////// Sub-Classes///////
-class Person{
-    constructor (fName, lName){
-        this.firstName = fName;
-        this.lastName = lName;
+// class Person{
+//     constructor (fName, lName){
+//         this.firstName = fName;
+//         this.lastName = lName;
+//     }
+//     grettings()
+//     {
+//         return `Hello ${this.firstName} ${this.lastName}!`;
+//     }
+// }
+
+// // adding Sub class 
+// class Customer extends Person{
+//     constructor (fName, lName, phone, id)
+//     {
+//         super(fName, lName);
+//         this.phoneNumber = phone;
+//         this.customerId = id;
+//     }
+
+//     getFullName()
+//     {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+// let customer1 = new Customer("Omar", "Kaushru", "01712121212", "990000")
+// console.log(customer1.grettings());
+// console.log(customer1.getFullName());
+
+//                                                                              Static Function
+// Static Function
+
+class Person {
+    constructor(fname, lname) {
+        this.firstname = fname;
+        this.lastname = lname;
     }
-    grettings()
-    {
-        return `Hello ${this.firstName} ${this.lastName}!`;
+
+    greeting() {
+        console.log(`Hello ${this.firstname} ${this.lastname}!`);
+    }
+
+    // static
+    static test() {
+        console.log("I am staic!");
     }
 }
 
-// adding Sub class 
-class Customer extends Person{
-    constructor (fName, lName, phone, id)
-    {
-        super(fName, lName);
-        this.phoneNumber = phone;
-        this.customerId = id;
-    }
+let person1 = new Person("Md Omar", "Kaushru");
 
-    getFullName()
-    {
-        return `${this.firstName} ${this.lastName}`;
-    }
-}
-
-let customer1 = new Customer("Omar", "Kaushru", "01712121212", "990000")
-console.log(customer1.grettings());
-console.log(customer1.getFullName());
+console.log(person1.greeting());
+console.log(Person.test()); //we can not call static funciotn by an object its(the caller) must to be a class
