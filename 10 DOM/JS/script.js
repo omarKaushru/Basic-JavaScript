@@ -166,4 +166,25 @@ list.children[0].textContent = "Hello";
 val = list.children[1].children[0];
 val = list.children[1].children[0].href;
 
+
+val = list.firstChild;
+val = list.firstElementChild;
+val = list.lastChild;
+val = list.lastElementChild;
+
+val = list.childElementCount;
+
+val = listItem;
+val = listItem.parentElement;
+val = listItem.parentNode;
+val = listItem.parentElement.parentElement;
+
+val = listItem.nextSibling.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling;
+
+val = document.querySelector('ul li:last-child');
+val = val.previousSibling;
+val = val.previousElementSibling;
+
 console.log(val);
