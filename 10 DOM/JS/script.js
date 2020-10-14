@@ -193,47 +193,41 @@
 
 // Adding Element to DOM
 // Create Element
+
 let olItem = document.createElement('li');
-
-// Add Id and Class
-olItem.className = "a new another-class";
-olItem.id = "new-element";
-
-// Add Attribute
-olItem.setAttribute('title', 'A title to new Element');
-
-olItem.appendChild(document.createTextNode('JavaScript'));
+let temp = document.createTextNode('ABCBA');
+olItem.appendChild(temp);
 document.querySelector('ol').appendChild(olItem);
-//console.log(olItem);
+
+olItem = document.createElement('li');
+olItem.appendChild(document.createTextNode('XYZ'));
+document.querySelector('ol').appendChild(olItem);
 
 let ulItem = document.createElement('li');
-let link = document.createElement('a');
+let link = document.createElement ('a');
 
 link.appendChild(document.createTextNode('Instagram'));
-link.setAttribute('href', 'https://www.instagram.com');
+link.setAttribute('href', 'https://www.instagram.com/');
 
 ulItem.appendChild(link);
-
 document.querySelector('ul').appendChild(ulItem);
 
-console.log(ulItem);
+ulItem = document.createElement('li');
+link = document.createElement ('a');
+link.appendChild(document.createTextNode("UVA"));
+link.setAttribute('href', 'https://onlinejudge.org/');
+ulItem.appendChild(link);
+document.querySelector('ul').appendChild(ulItem);
 
-// Replacing Elements
+///Replacing elemnets
 let newHeading = document.createElement('h1');
-newHeading.appendChild(document.createTextNode('H1 New Heading'));
-newHeading.className = "sample-class";
+newHeading.appendChild(document.createTextNode('I do better than I promise!'));
 
 let oldHeading = document.querySelector('h3');
 
 let parent = document.querySelector('.container');
-//parent = oldHeading.parentElement;
+
 parent.replaceChild(newHeading, oldHeading);
-
-
-console.log(newHeading);
-console.log(oldHeading);
-console.log(parent);
-
 
 // Remove element
 
