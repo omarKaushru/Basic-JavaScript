@@ -194,57 +194,60 @@
 // Adding Element to DOM
 // Create Element
 
-let olItem = document.createElement('li');
-let temp = document.createTextNode('ABCBA');
-olItem.appendChild(temp);
-document.querySelector('ol').appendChild(olItem);
+// let olItem = document.createElement('li');
+// let temp = document.createTextNode('ABCBA');
+// olItem.appendChild(temp);
+// document.querySelector('ol').appendChild(olItem);
 
-olItem = document.createElement('li');
-olItem.appendChild(document.createTextNode('XYZ'));
-document.querySelector('ol').appendChild(olItem);
+// olItem = document.createElement('li');
+// olItem.appendChild(document.createTextNode('XYZ'));
+// document.querySelector('ol').appendChild(olItem);
 
-let ulItem = document.createElement('li');
-let link = document.createElement ('a');
+// let ulItem = document.createElement('li');
+// let link = document.createElement ('a');
 
-link.appendChild(document.createTextNode('Instagram'));
-link.setAttribute('href', 'https://www.instagram.com/');
+// link.appendChild(document.createTextNode('Instagram'));
+// link.setAttribute('href', 'https://www.instagram.com/');
 
-ulItem.appendChild(link);
-document.querySelector('ul').appendChild(ulItem);
+// ulItem.appendChild(link);
+// document.querySelector('ul').appendChild(ulItem);
 
-ulItem = document.createElement('li');
-link = document.createElement ('a');
-link.appendChild(document.createTextNode("UVA"));
-link.setAttribute('href', 'https://onlinejudge.org/');
-ulItem.appendChild(link);
-document.querySelector('ul').appendChild(ulItem);
+// ulItem = document.createElement('li');
+// link = document.createElement ('a');
+// link.appendChild(document.createTextNode("UVA"));
+// link.setAttribute('href', 'https://onlinejudge.org/');
+// ulItem.appendChild(link);
+// document.querySelector('ul').appendChild(ulItem);
 
-///Replacing elemnets
-let newHeading = document.createElement('h1');
-newHeading.appendChild(document.createTextNode('I do better than I promise!'));
+// ///Replacing elemnets
+// let newHeading = document.createElement('h1');
+// newHeading.appendChild(document.createTextNode('I do better than I promise!'));
 
-let oldHeading = document.querySelector('h3');
+// let oldHeading = document.querySelector('h3');
 
-let parent = document.querySelector('.container');
+// let parent = document.querySelector('.container');
 
-parent.replaceChild(newHeading, oldHeading);
+// parent.replaceChild(newHeading, oldHeading);
 
-// Remove element
+// // Remove element
 
-let lis = document.querySelectorAll('li');
-let list = document.querySelector('ul');
+// let lis = document.querySelectorAll('li');
+// let list = document.querySelector('ul');
 
-lis[0].remove();
-list.removeChild(lis[7]);
+// lis[0].remove();
+// list.removeChild(lis[7]);
 
-//
-list.classList.add("test");
-list.classList.add("test-new");
-list.classList.remove("test-new");
-let val = list.hasAttribute('title');
-val = list.hasAttribute("class");
-list.setAttribute("title", "Yes")
-list.removeAttribute("title");
-console.log(list);
+// //
+// list.classList.add("test");
+// list.classList.add("test-new");
+// list.classList.remove("test-new");
+// let val = list.hasAttribute('title');
+// val = list.hasAttribute("class");
+// list.setAttribute("title", "Yes")
+// list.removeAttribute("title");
+// console.log(list);
 
-//console.log(link);
+// //console.log(link);
+
+
+//////////////////////////////////////////////////////// Events
