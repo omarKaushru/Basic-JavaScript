@@ -251,3 +251,16 @@
 
 
 //////////////////////////////////////////////////////// Events
+
+
+// https://www.w3schools.com/JS/js_events_examples.asp
+
+// Event Listener
+//handaling event directly from javascript
+document.getElementById('sample-btn').addEventListener('click', message);
+
+
+function message()
+{
+    alert("Hello world");
+}
