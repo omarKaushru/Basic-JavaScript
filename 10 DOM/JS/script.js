@@ -257,10 +257,59 @@
 
 // Event Listener
 //handaling event directly from javascript
-document.getElementById('sample-btn').addEventListener('click', message);
+// document.getElementById('sample-btn').addEventListener('click', message);
 
 
-function message()
+// function message()
+// {
+//     alert("Hello world");
+// }
+
+
+// more on event 
+
+// document.getElementById('sample-btn').addEventListener('click', message);
+
+//applying event in whole div
+// document.querySelector(".container").addEventListener('mousemove', message);
+
+// document.querySelector('.container').style.background = 'green';
+
+
+// function message(e) //here 'e' is just a parameter who keeps all the information of the event.
+// {
+//     let val = e;
+//     // target calls that element in which we added event.
+//     val = e.target; 
+//     val = e.target.id;
+//     val = e.timeStamp;
+//     val = e.type; //event type
+//     val = e.clientY; ///provides the pixel value of Y axis on whole page
+//     val = e.clientX; /// provides the pixel value of X axis on whl page
+//     val = e.offsetY; // provide the pixel value of y axis in that element; 
+//     val = e.offsetX;
+//     // console.log(val);
+//     val = this; //will call full container // same as e.target
+//     this.style.background = `#${e.offsetX}`; //will change background each time we took the mouse there
+//     console.log(e.offsetX+" "+ e.offsetY);
+//     console.log(val);
+// }
+
+//performing on form through event
+document.querySelector("#name").addEventListener('focus', test);
+// if we use focus that event will trigger only when we click on that element. 
+
+document.querySelector("#name").addEventListener('keyup',test2)
+
+function test(e)
 {
-    alert("Hello world");
+    // console.log("Focused!")
+    this.style.background = 'pink';
+}
+
+function test2(e)
+{
+    // console.log(this.value); //here "value" holds the value of the input field
+    document.getElementById("demo").innerText = this.value; //this will show the text typed in the input in a pargraph
+    
 }
