@@ -63,7 +63,7 @@ re = /h.llo/i; //matches any one character
 re = /h*llo/i; // zero or times
 re = /he?a?llo/; // Optional //here 'e', 'a' is optional. 
 re = /hello?/; // escaping
-
+re = /hello\?/i; //now the question mark will consider as a part of the character
 str = "Again hello World";
 str = "hello hello";
 str = "hello";
