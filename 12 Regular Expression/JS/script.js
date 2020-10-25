@@ -41,58 +41,60 @@
 
 /////////////////////////////////////////////////////////////Literal and Meta Characters
 
-let re;
-let str;
+// let re;
+// let str;
 
-//Literal characters
+// //Literal characters
 
-re = /hello/;
-re = /hello/i;
-re = /hell/i;
-re = /lo w/i;
-re = /low/i;
+// re = /hello/;
+// re = /hello/i;
+// re = /hell/i;
+// re = /lo w/i;
+// re = /low/i;
 
-//Mata characters
-//
-re = /^Hello/i; //must start with Hello.
-re = /Hello$/i; //must end with hello
-re = /world$/i;
+// //Mata characters
+// //
+// re = /^Hello/i; //must start with Hello.
+// re = /Hello$/i; //must end with hello
+// re = /world$/i;
 
-re = /^hello$/i; // must start and end with hello
-re = /h.llo/i; //matches any one character
-re = /h*llo/i; // zero or times
-re = /he?a?llo/; // Optional //here 'e', 'a' is optional. 
-re = /hello?/; // escaping
-re = /hello\?/i; //now the question mark will consider as a part of the character // it is called scaping
-str = "Again hello World";
-str = "hello hello";
-str = "hello";
-str = "hallo";
-str = "hillo";
-str = "h llo";
-str = "hllo";
-str = "hillo worlde";
-str = "hello worlde";
-str = "hillo";
-str = "hilo";
-str = "hhfsdhfsuillo";
-str = "hello";
-str = "hllo";
-str = "hallo";
-str = "htllo";
-str = "heallo";
-str = "hello";
-str = "hallo";
-str = "hllo";
-str = "hello";
-str = "hello?";
-console.log(re.exec(str));
-reTest (re,str);
-function reTest (re, str){
-if(re.test(str)){
-    console.log(`'${str}' matches '${re.source}'`);
-}
-else{
-    console.log(`'${str}' doesn't match '${re.source}'`);
-}
-}
+// re = /^hello$/i; // must start and end with hello
+// re = /h.llo/i; //matches any one character
+// re = /h*llo/i; // zero or times
+// re = /he?a?llo/; // Optional //here 'e', 'a' is optional. 
+// re = /hello?/; // escaping
+// re = /hello\?/i; //now the question mark will consider as a part of the character // it is called scaping
+// str = "Again hello World";
+// str = "hello hello";
+// str = "hello";
+// str = "hallo";
+// str = "hillo";
+// str = "h llo";
+// str = "hllo";
+// str = "hillo worlde";
+// str = "hello worlde";
+// str = "hillo";
+// str = "hilo";
+// str = "hhfsdhfsuillo";
+// str = "hello";
+// str = "hllo";
+// str = "hallo";
+// str = "htllo";
+// str = "heallo";
+// str = "hello";
+// str = "hallo";
+// str = "hllo";
+// str = "hello";
+// str = "hello?";
+// console.log(re.exec(str));
+// reTest (re,str);
+// function reTest (re, str){
+// if(re.test(str)){
+//     console.log(`'${str}' matches '${re.source}'`);
+// }
+// else{
+//     console.log(`'${str}' doesn't match '${re.source}'`);
+// }
+// }
+
+//////////////////////////////////////////////////////////////Character Sets, Quantifier and Grouping
