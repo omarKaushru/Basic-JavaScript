@@ -51,8 +51,10 @@
 
 ////////////////////////////////////////////////////////// Data From External Server
 
-// http://www.icndb.com/
-// using API
+// http://www.icndb.com/api/
+// API
+// RESTful API
+
 
 document.getElementById('get_data').addEventListener('click', loadJokes);
 
