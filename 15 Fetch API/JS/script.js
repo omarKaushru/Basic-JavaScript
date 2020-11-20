@@ -28,14 +28,51 @@
 
 ////////////////Asyncronus way
 
+// let persons = [{firstName: "Abul", lastName: "Kabul"},
+//                 {firstName: "Omar", lastName: "Khoium"}
+//             ];
+// function createPerson(person, callback){
+//     setTimeout(function(){
+//         persons.push(person);
+//         callback();//this is actually callig getPerson() function
+//     },3000);
+// }
+
+// function getPerson(){
+//     setTimeout(function(){
+//         let output = '';
+//         persons.forEach(function(person){
+//             output += `<li>${person.firstName} ${person.lastName} </li>`;
+//         });
+//         document.getElementById('output').innerHTML = output;  
+//     },1000)
+// }
+// createPerson({firstName:"Shamsun", lastName: "Nahar"}, getPerson);
+
+/////////////////////JavaScript Promises
+//////.then 
+/// promises is an alternative of callback function
+
 let persons = [{firstName: "Abul", lastName: "Kabul"},
                 {firstName: "Omar", lastName: "Khoium"}
             ];
-function createPerson(person, callback){
-    setTimeout(function(){
+function createPerson(person){
+    let prom = new Promise(function (resolve, reject){
         persons.push(person);
-        callback();//this is actually callig getPerson() function
-    },3000);
+      //  resolve(); //helps to keeps(excute) the promise
+
+        //what will happen if there is error
+        //creating dummy error
+        let error = true;
+        if(!error)
+        {
+            resolve();
+        }
+        else{
+            reject('Error: Something worng');
+        }
+    });
+    return prom;
 }
 
 function getPerson(){
@@ -47,4 +84,6 @@ function getPerson(){
         document.getElementById('output').innerHTML = output;  
     },1000)
 }
-createPerson({firstName:"Shamsun", lastName: "Nahar"}, getPerson);
+createPerson({firstName:"Shamsun", lastName: "Nahar"}).then(getPerson).catch(function(err){
+    console.log(err);
+});
