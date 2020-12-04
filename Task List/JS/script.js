@@ -10,6 +10,7 @@ let taskInput = document.querySelector('#new_task');
 form.addEventListener('submit',addTask);
 taskList.addEventListener('click',removeTask);
 clearBtn.addEventListener('click',clearTask);
+filter.addEventListener('keyup',filterTask);
 // define functions
 
 //Add Task
@@ -53,4 +54,19 @@ function clearTask(e){
     while(taskList.firstChild){
         taskList.removeChild(taskList.firstChild);
     }
+}
+
+
+// Filter Task
+function filterTask(e){
+    let text = e.target.value.toLowerCase();
+    // console.log(text);
+    document.querySelectorAll('li').forEach(task=>{
+        let item = task.firstChild.textContent;
+        if(item.toLowerCase().indexOf(text) !=-1){
+            task.style.display = 'block';
+        }else{
+            task.style.display = 'none';
+        }
+    });
 }
