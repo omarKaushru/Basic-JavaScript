@@ -146,6 +146,119 @@
 // [,,] = f();
 
 // Assigning the rest of an array to a variable
-const [a, ...b] = [1, 2, 3];
-console.log(a); // 1
-console.log(b); // [2, 3]
+// const [a, ...b] = [1, 2, 3];
+// console.log(a); // 1
+// console.log(b); // [2, 3]
+
+
+// ................................................................Spread Operator
+
+// Spread Operator ...
+// let str = "Bohubrihi";
+// let newStr = [...str];
+
+// //console.log(newStr);
+
+// let fruit1 = ["Apple", "Pine-apple", "Mango"];
+// let fruit2 = ["Orange", "Grape"];
+// let newFruit = "Jackfruit";
+
+// let newArr = [...fruit1, newFruit, ...fruit2];
+
+// //console.log(newArr);
+// // Spread on Object (ES8)
+// let person = {
+//     fname: "Simanta",
+//     lname: "Paul"
+// }
+
+// let newPerson = {...person, dob: "08-26-1995"}
+// console.log(newPerson);
+
+// .......................................Spread Operator with function Parameters
+// Spread Operator ...
+ 
+// let numbers = [23, 1, 0, -1];
+
+// //console.log(Math.max(...numbers));
+
+// let person = ["Simanta", "Paul"]
+
+// let test = (fname, lname) => {
+//     console.log(`Hello ${fname} ${lname}`);
+// }
+
+// test(...person);
+
+// ..................................................Rest Operator
+
+
+// Rest Operator ...
+
+// let fruits = ['apple', 'grape', 'mango', 'jackfruit'];
+// let [first, second, ...third] = fruits
+
+// // console.log(first);
+// // console.log(second);
+// // console.log(third);
+
+// let person = {
+//     fname: "Simanta",
+//     lname: "Paul",
+//     dob: "8-26-1995"
+// }
+
+// let {fname, ...lname} = person
+
+// // console.log(fname);
+// // console.log(lname);
+
+// let moreNum = [78,1,2,5,6];
+
+// let test =(name, ...numbers) => { // Rest
+//     console.log(name);
+//     console.log(numbers);
+// }
+
+// test("Simanta", 67,3,3);
+// test("Simanta", ...moreNum); // Spread
+
+// .....................................................................Sets
+
+// Set
+// let mySet = new Set([1, 2, 2, 4, 4]);
+
+// // Add
+// mySet.add("Hello");
+// mySet.add(2);
+// // Delete
+// mySet.delete(4);
+
+// // Check
+// //console.log(mySet.has(4));
+// // Size
+// //console.log(mySet.size);
+
+// // Iterating Sets
+
+// // for (x of mySet.values()) {
+// //     console.log(x);
+// // }
+
+// // let iter = mySet.entries();
+
+// // console.log(iter.next());
+
+// // console.log(iter.next());
+
+// // console.log(iter.next());
+
+// // for (let [x] of mySet.entries()) {
+// //     console.log(x);
+// // }
+
+// let iter = [...mySet.values()];
+
+// console.log(iter);
+
+// mySet.forEach(value => console.log(value));
